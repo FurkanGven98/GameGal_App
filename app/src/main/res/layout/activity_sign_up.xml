@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Sign_up">
+
+    <Button
+        android:id="@+id/sign_in_button1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/bordo"
+        android:text="Giriş"
+
+        app:cornerRadius="100dp">
+
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:src="@drawable/ic_launcher_background">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/fullname_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:background="#F6F6F6"
+        android:hint="Ad Soyad"
+        android:inputType="textEmailAddress"
+        android:padding="10dp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/username_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullname_signup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:background="#F6F6F6"
+        android:hint="Kullanıcı Adı"
+        android:inputType="textEmailAddress"
+        android:padding="10dp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/email_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F6F6"
+        android:padding="10dp"
+        android:layout_below="@+id/username_signup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/password_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F6F6"
+        android:padding="10dp"
+        android:layout_below="@+id/email_signup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:inputType="textPassword"
+        android:hint="Şifre">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_signup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/bordo"
+        android:drawableBottom="@drawable/ic_user_plus_solid"
+        android:text="Kayıt Ol"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="17dp">
+
+    </Button>
+
+
+
+</RelativeLayout>
