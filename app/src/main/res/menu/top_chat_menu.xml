@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/arrow_left"
+        android:icon="@drawable/arrowleft"
+        android:title="" />
+
+    <item
+        android:id="@+id/msg_text"
+        android:title="Direct Message"
+        />
+
+    <item
+        android:id="@+id/filter_icon"
+        android:icon="@drawable/filter"
+        android:title="" />
+
+
+</menu>
