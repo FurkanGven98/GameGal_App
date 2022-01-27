@@ -15,9 +15,6 @@
             android:label="@string/title_activity_account_settings"
             android:theme="@style/Theme.GameGal_App.NoActionBar" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
@@ -27,7 +24,7 @@
             android:name=".Sign_in"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
