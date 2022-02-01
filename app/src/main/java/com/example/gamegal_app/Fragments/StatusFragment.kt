@@ -1,13 +1,18 @@
-package com.example.gamegal_app
+package com.example.gamegal_app.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-class ProfileFragment : Fragment() {
-      override fun onCreate(savedInstanceState: Bundle?) {
+import com.example.gamegal_app.R
+
+
+class StatusFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -15,7 +20,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_status, container, false)
     }
 
 }
