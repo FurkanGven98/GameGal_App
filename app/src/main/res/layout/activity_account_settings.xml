@@ -90,18 +90,17 @@
         android:inputType="text">
 
     </EditText>
+
     <EditText
         android:id="@+id/username_profile_frag"
-        android:hint="Kullanıcı Adı"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="16dp"
         android:layout_below="@+id/full_name_profile_frag"
-        android:inputType="text"
-        >
-    </EditText>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:hint="Kullanıcı Adı"
+        android:inputType="text"></EditText>
 
     <EditText
         android:id="@+id/bio_profile_frag"

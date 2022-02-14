@@ -24,13 +24,13 @@
                     android:src="@drawable/ic_launcher_background"
                     android:layout_alignParentLeft="true"
                     />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
-                    android:src="@drawable/send_icon"
-                    android:layout_centerInParent="true"
                     android:layout_alignParentRight="true"
-                    />
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/send_icon" />
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
