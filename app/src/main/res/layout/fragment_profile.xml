@@ -26,20 +26,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/settings_btn"
+                <Button
+                    android:id="@+id/edit_account_settings_btn"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
+                    android:background="@android:drawable/arrow_up_float"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="0dp"
                     android:src="@drawable/settings">
 
-                </ImageView>
+                </Button>
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/settings_btn"
+                    android:layout_alignLeft="@+id/edit_account_settings_btn"
                     android:layout_alignParentStart="true"
                     android:text="Kullanıcı Adı"
                     android:layout_marginStart="140dp"
