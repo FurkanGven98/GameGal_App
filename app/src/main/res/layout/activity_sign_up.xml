@@ -9,7 +9,7 @@
     tools:context=".Sign_up">
 
     <Button
-        android:id="@+id/sign_in_button1"
+        android:id="@+id/signin_link_btn"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="300dp"
