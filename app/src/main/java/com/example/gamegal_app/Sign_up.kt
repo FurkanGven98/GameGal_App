@@ -32,10 +32,10 @@ class Sign_up : AppCompatActivity() {
         val password = password_signup.text.toString()
 
         when{
-            TextUtils.isEmpty(fullName) -> Toast.makeText(this,"Full Name is required.", Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(userName) -> Toast.makeText(this,"User Name is required.", Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(email) -> Toast.makeText(this,"Email is required.", Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(password) -> Toast.makeText(this,"Password is required.", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(fullName) -> Toast.makeText(this,"İsim Gerekli", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(userName) -> Toast.makeText(this,"Kullanıcı adı Gerekli.", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(email) -> Toast.makeText(this,"Email Gerekli.", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(password) -> Toast.makeText(this,"Şifre Gerekli.", Toast.LENGTH_LONG).show()
 
             else ->{
                 val progressDialog= ProgressDialog(this@Sign_up)
@@ -65,8 +65,8 @@ class Sign_up : AppCompatActivity() {
         val usersRef : DatabaseReference = FirebaseDatabase.getInstance().reference.child("Users")
         val userMap= HashMap<String,Any>()
         userMap["uid"] = currentUserId
-        userMap["fullname"] = fullName.toLowerCase()
-        userMap["username"] = userName.toLowerCase()
+        userMap["fullname"] = currentUserId
+        userMap["username"] = currentUserId
         userMap["email"] = email
         userMap["bio"] = "Hey I am created by Furkan Güven."
         userMap["image"] ="https://firebasestorage.googleapis.com/v0/b/gamegal-26535.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=4e83b86e-d2bb-40c7-b481-2cdb38d64cc4"
@@ -76,7 +76,6 @@ class Sign_up : AppCompatActivity() {
                 if(task.isSuccessful){
                     progressDialog.dismiss()
                     Toast.makeText(this,"Account has been created succesfully.",Toast.LENGTH_LONG).show()
-
 
                     FirebaseDatabase.getInstance().reference
                         .child("Follow").child(currentUserId)

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "815644791535",
-    "project_id": "gamegal-26535",
-    "storage_bucket": "gamegal-26535.appspot.com"
+    "project_number": "568154126887",
+    "project_id": "test-ef087",
+    "storage_bucket": "test-ef087.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:815644791535:android:7d205c03eac2b87804811a",
+        "mobilesdk_app_id": "1:568154126887:android:f0780edd12324b20362c02",
         "android_client_info": {
           "package_name": "com.example.gamegal_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "815644791535-bql1284bg9c19q71qhtdom32tt1u2isi.apps.googleusercontent.com",
+          "client_id": "568154126887-3lrmpokq18nr5l0onn5jinl2bncasqqv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBR5ZD4aQVmJkr1i8_4jwje7zZTHr4gfEY"
+          "current_key": "AIzaSyCAV5eQE7KQU1mG8ir3xng8BM4YqEOuOmI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "815644791535-bql1284bg9c19q71qhtdom32tt1u2isi.apps.googleusercontent.com",
+              "client_id": "568154126887-3lrmpokq18nr5l0onn5jinl2bncasqqv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
