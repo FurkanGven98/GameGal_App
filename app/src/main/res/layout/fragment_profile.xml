@@ -3,24 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ProfileFragment"
-    android:background="@color/bordo">
+    android:background="@color/sariarka"
+    tools:context=".Fragments.ProfileFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:background="@color/siyahrenk">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/profile_toolbar"
-            android:backgroundTint="@color/dm_bg"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="6dp"
-            android:background="@android:color/white">
+            android:layout_height="50dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -30,9 +25,9 @@
                     android:id="@+id/edit_account_settings_btn"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@android:drawable/arrow_up_float"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="0dp"
+                    android:background="@android:drawable/arrow_up_float"
                     android:src="@drawable/settings">
 
                 </Button>
@@ -42,10 +37,9 @@
                     android:layout_height="100dp"
                     android:layout_alignLeft="@+id/edit_account_settings_btn"
                     android:layout_alignParentStart="true"
-                    android:text="Kullanıcı Adı"
                     android:layout_marginStart="140dp"
                     android:layout_marginTop="16dp"
-                    >
+                    android:text="Kullanıcı Adı">
 
                 </TextView>
 
@@ -75,18 +69,19 @@
         android:src="@drawable/profile">
 
     </de.hdodenhof.circleimageview.CircleImageView>
-<RelativeLayout
-    android:id="@+id/relative1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/profile_image_view_profile_frag">
 
-     <LinearLayout
-        android:id="@+id/linear1"
+    <RelativeLayout
+        android:id="@+id/relative1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_below="@+id/profile_image_view_profile_frag">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -105,16 +100,18 @@
                     android:textStyle="bold">
 
                 </TextView>
+
                 <TextView
                     android:id="@+id/total_followers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textSize="12dp"
-                    android:textColor="@android:color/black">
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp">
 
                 </TextView>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -122,40 +119,42 @@
                 android:layout_marginRight="7dp"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Takip"
+                    android:textColor="@android:color/black"
                     android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black">
+                    android:textStyle="bold">
 
                 </TextView>
+
                 <TextView
                     android:id="@+id/total_following"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textSize="12dp"
-                    android:textColor="@android:color/black">
-                </TextView>
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp"></TextView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="7dp"
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fotoğraflar"
+                    android:textColor="@android:color/black"
                     android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black">
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -164,8 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textColor="@android:color/black">
-                </TextView>
+                    android:textColor="@android:color/black"></TextView>
 
             </LinearLayout>
 
@@ -176,22 +174,21 @@
                 android:layout_marginRight="7dp"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Durumlar"
+                    android:textColor="@android:color/black"
                     android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black">
-                </TextView>
+                    android:textStyle="bold"></TextView>
 
                 <TextView
                     android:id="@+id/total_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textColor="@android:color/black">
-                </TextView>
+                    android:textColor="@android:color/black"></TextView>
 
             </LinearLayout>
 
@@ -202,55 +199,57 @@
                 android:layout_marginRight="7dp"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Oyunlarım"
+                    android:textColor="@android:color/black"
                     android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black">
-                </TextView>
+                    android:textStyle="bold"></TextView>
+
                 <TextView
                     android:id="@+id/fav_games"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textColor="@android:color/black">
-                </TextView>
+                    android:textColor="@android:color/black"></TextView>
             </LinearLayout>
-    </LinearLayout>
-            <LinearLayout
-                android:layout_below="@+id/linear1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-                <ImageButton
-                    android:id="@+id/images_grid_view_btn"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_launcher_foreground">
-                </ImageButton>
-                <ImageButton
-                    android:id="@+id/images_save_btn"
-                    android:layout_width="1dp"
-                    android:layout_height="49dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/send_icon"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_weight="1">
-                </ImageButton>
-            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/images_grid_view_btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_launcher_foreground"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/images_save_btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="1dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/send_icon"></ImageButton>
+        </LinearLayout>
 
     </RelativeLayout>
+
     <RelativeLayout
-        android:layout_below="@+id/relative1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative1">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_upload_pic"
@@ -274,4 +273,4 @@
 
     </RelativeLayout>
 
-    </RelativeLayout>
+</RelativeLayout>

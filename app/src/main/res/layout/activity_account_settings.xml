@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountSettingsActivity"
-    android:background="@color/bordo">
+    android:background="#F7FF8B"
+    tools:context=".AccountSettingsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:background="@color/siyahrenk">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/profile_toolbar"
-            android:backgroundTint="@color/dm_bg"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="6dp"
-            android:background="@android:color/white">
+            android:layout_height="50dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -56,11 +50,10 @@
         android:id="@+id/profile_image_view_profile_frag"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/profile"
         android:layout_below="@+id/app_bar_layout_profile"
-        >
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/profile">
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -113,32 +106,47 @@
         android:hint="Biografi"
         android:inputType="text"></EditText>
 
-    <Button
-        android:id="@+id/logout_btn"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/delete_account_btn"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="6dp"
-        android:backgroundTint="@color/dm_bg"
-        android:text="Çıkış Yap"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16dp"></Button>
-    <Button
-        android:id="@+id/delete_account_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="6dp"
-        android:text="Hesabı Sil"
-        android:textAllCaps="false"
-        android:backgroundTint="@color/dm_bg"
-        android:textColor="@android:color/white"
-        android:textSize="16dp"
         android:layout_alignParentBottom="true"
-        >
-    </Button>
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/siyahrenk"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Çıkış Yap"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16dp"></Button>
+
+        <Button
+            android:id="@+id/delete_account_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/logout_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/siyahrenk"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Hesabı Sil"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"></Button>
+
+
+    </LinearLayout>
 </RelativeLayout>

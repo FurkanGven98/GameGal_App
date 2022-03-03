@@ -12,9 +12,10 @@
         android:layout_height="40dp"
         android:layout_marginStart="300dp"
         android:layout_marginTop="10dp"
-        android:backgroundTint="@color/bordo"
+        android:backgroundTint="@color/siyahrenk"
         android:text="Kayıt ol"
 
+        android:textColor="@color/white"
         app:cornerRadius="100dp">
 
 
@@ -64,9 +65,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
-        android:backgroundTint="@color/bordo"
+        android:backgroundTint="@color/siyahrenk"
         android:drawableBottom="@drawable/ic_sign_in_alt_solid"
         android:text="Giriş"
+        android:textColor="@color/white"
         app:cornerRadius="100dp">
 
 
@@ -78,6 +80,6 @@
         android:layout_marginTop="500dp"
         android:gravity="center_horizontal"
         android:text="Şifreyi unuttum"
-        android:textColor="#825D5D" />
+        android:textColor="@color/black" />
 
 </RelativeLayout>

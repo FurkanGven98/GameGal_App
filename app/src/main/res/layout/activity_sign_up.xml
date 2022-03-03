@@ -100,11 +100,11 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="@color/bordo"
+        android:backgroundTint="@color/siyahrenk"
         android:drawableBottom="@drawable/ic_user_plus_solid"
         android:text="Kayıt Ol"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="17dp">
 
     </Button>
