@@ -148,7 +148,7 @@ class  UserAdapter (private var mContext:Context,
 
         val notiMap = HashMap<String,Any>()
         notiMap ["userid"] = firebaseUser!!.uid
-        notiMap ["text"] = "started following you"
+        notiMap ["text"] = "Seni takiplemeye başladı."
         notiMap ["postid"] = ""
         notiMap ["ispost"] = false
         notiRef.push().setValue(notiMap)
