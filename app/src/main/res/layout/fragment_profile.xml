@@ -33,13 +33,14 @@
                 </Button>
 
                 <TextView
+                    android:id="@+id/profile_fragment_username"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_alignLeft="@+id/edit_account_settings_btn"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="140dp"
                     android:layout_marginTop="16dp"
-                    android:text="Kullanıcı Adı">
+                    android:text="username">
 
                 </TextView>
 
@@ -59,8 +60,10 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image_view_profile_frag"
+        android:id="@+id/pro_image_profile_frag"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_below="@+id/app_bar_layout_profile"
@@ -70,11 +73,38 @@
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
+
+
+    <TextView
+        android:id="@+id/full_name_profile_frag"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:text="Ad Soyad">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/bio_profile_frag"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/full_name_profile_frag"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:text="Bio">
+
+    </TextView>
+
+
+
     <RelativeLayout
         android:id="@+id/relative1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_image_view_profile_frag">
+        android:layout_below="@+id/pro_image_profile_frag">
 
         <LinearLayout
             android:id="@+id/linear1"
@@ -247,6 +277,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/relative1">
@@ -272,5 +303,7 @@
 
 
     </RelativeLayout>
+
+
 
 </RelativeLayout>
