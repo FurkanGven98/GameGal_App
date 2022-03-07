@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sariarka"
+    android:backgroundTint="@color/bordo"
     tools:context=".AddPostActivity">
 
     <com.google.android.material.appbar.AppBarLayout

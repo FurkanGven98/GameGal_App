@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sariarka"
     tools:context=".Fragments.ProfileFragment">
 
+
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/siyahrenk">
+
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/profile_toolbar"
@@ -21,45 +27,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
                 <Button
                     android:id="@+id/edit_account_settings_btn"
-                    android:layout_width="30dp"
+                    android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="0dp"
-                    android:background="@android:drawable/arrow_up_float"
-                    android:src="@drawable/settings">
+                    android:backgroundTint="@color/siyahrenk"
+                    app:icon="@drawable/settings"
+                    app:iconSize="30dp"
+                    app:iconTint="@color/sariarka" />
 
-                </Button>
-
-                <TextView
-                    android:id="@+id/profile_fragment_username"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/edit_account_settings_btn"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="16dp"
-                    android:text="username">
-
-                </TextView>
-
-
-                <ImageView
+                <Button
                     android:id="@+id/message_btn"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginRight="15dp"
-                    android:src="@drawable/message">
+                    android:backgroundTint="@color/siyahrenk"
+                    app:icon="@drawable/message"
+                    app:iconSize="30dp"
+                    app:iconTint="@color/sariarka" />
 
-                </ImageView>
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -74,37 +66,45 @@
     </de.hdodenhof.circleimageview.CircleImageView>
 
 
+    <TextView
+        android:id="@+id/profile_fragment_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="username">
+
+    </TextView>
 
     <TextView
         android:id="@+id/full_name_profile_frag"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
         android:text="Ad Soyad">
 
     </TextView>
 
+
     <TextView
         android:id="@+id/bio_profile_frag"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/full_name_profile_frag"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="250dp"
         android:text="Bio">
 
     </TextView>
-
-
 
     <RelativeLayout
         android:id="@+id/relative1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pro_image_profile_frag">
+        android:layout_below="@+id/pro_image_profile_frag"
+        android:layout_marginTop="80dp">
 
         <LinearLayout
             android:id="@+id/linear1"
@@ -303,7 +303,6 @@
 
 
     </RelativeLayout>
-
 
 
 </RelativeLayout>
