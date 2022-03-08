@@ -48,12 +48,6 @@ class HomeFragment : Fragment() {
         postAdapter = context?.let { PostAdapter(it,postList as ArrayList<Post>) }
         recyclerView.adapter=postAdapter
 
-        recyclerViewStory = view.findViewById(R.id.recycler_view_story)
-        recyclerView.setHasFixedSize(true)
-        var linearLayoutManager2 = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
-        recyclerViewStory.layoutManager = linearLayoutManager2
-
-
         checkFollowings()
 
         return view

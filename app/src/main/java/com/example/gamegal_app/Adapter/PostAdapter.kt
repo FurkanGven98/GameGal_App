@@ -77,14 +77,14 @@ import de.hdodenhof.circleimageview.CircleImageView
             getTotalComments(holder.comments,post.getPostid())
             checkSavedStatus(post.getPostid(),holder.saveButton)
 
-           /* holder.postImage.setOnClickListener {
+            holder.postImage.setOnClickListener {
                 val editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
                 editor.putString("postId",post.getPostid())
                 editor.apply()
                 (mContext as FragmentActivity).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     PostDetailsFragment()
                 ).commit()
-            }*/
+            }
             holder.publisher.setOnClickListener {
                 val editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
                 editor.putString("profileId",post.getPublisher())
@@ -101,14 +101,14 @@ import de.hdodenhof.circleimageview.CircleImageView
                     ProfileFragment()
                 ).commit()
             }
-          /*  holder.postImage.setOnClickListener {
+            holder.postImage.setOnClickListener {
                 val editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
                 editor.putString("postId",post.getPostid())
                 editor.apply()
                 (mContext as FragmentActivity).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     PostDetailsFragment()
                 ).commit()
-            }*/
+            }
             if(post.getDescription().equals("") ){
                 holder.description.visibility = View.GONE
             }else{
