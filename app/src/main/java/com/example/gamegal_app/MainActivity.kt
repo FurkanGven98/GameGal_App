@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.gamegal_app.Fragments.HomeFragment
-import com.example.gamegal_app.Fragments.ProfileFragment
-import com.example.gamegal_app.Fragments.SearchFragment
-import com.example.gamegal_app.Fragments.StatusFragment
+import com.example.gamegal_app.Fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -28,8 +25,8 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this@MainActivity,AddPostActivity::class.java))
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.nav_add_status -> {
-                moveToFragment(StatusFragment())
+            R.id.nav_notifications -> {
+                moveToFragment(NotificationsFragment())
 
                 return@OnNavigationItemSelectedListener  true
             }

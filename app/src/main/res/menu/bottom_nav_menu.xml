@@ -17,7 +17,7 @@
         android:icon="@drawable/portrait"
         android:title="" />
     <item
-        android:id="@+id/nav_add_status"
+        android:id="@+id/nav_notifications"
         android:icon="@drawable/plus"
         android:title="" />
     <item
