@@ -1,5 +1,4 @@
 package com.example.gamegal_app
-
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,16 +10,13 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
-
 class Sign_up : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-
         signin_link_btn.setOnClickListener {
             startActivity(Intent(this,Sign_in::class.java))
         }
-
         signup_btn.setOnClickListener {
             CreateAccount()
         }
@@ -40,7 +36,7 @@ class Sign_up : AppCompatActivity() {
             else ->{
                 val progressDialog= ProgressDialog(this@Sign_up)
                 progressDialog.setTitle("SignUp")
-                progressDialog.setMessage("Please wait,this may take a while...")
+                progressDialog.setMessage("Lütfen bekleyiniz.")
                 progressDialog.setCanceledOnTouchOutside(false)
                 progressDialog.show()
                 val mAuth : FirebaseAuth = FirebaseAuth.getInstance()
@@ -68,14 +64,14 @@ class Sign_up : AppCompatActivity() {
         userMap["fullname"] = fullName.toLowerCase()
         userMap["username"] = userName.toLowerCase()
         userMap["email"] = email
-        userMap["bio"] = "Hey I am created by Furkan Güven."
+        userMap["bio"] = "Hey! Burası benim kişisel alanım."
         userMap["image"] ="https://firebasestorage.googleapis.com/v0/b/gamegal-26535.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=4e83b86e-d2bb-40c7-b481-2cdb38d64cc4"
 
         usersRef.child(currentUserId).setValue(userMap)
             .addOnCompleteListener { task->
                 if(task.isSuccessful){
                     progressDialog.dismiss()
-                    Toast.makeText(this,"Account has been created succesfully.",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Hesap başarıyla oluşturuldu.Oyun dünyasına hoşgeldin",Toast.LENGTH_LONG).show()
 
                     FirebaseDatabase.getInstance().reference
                         .child("Follow").child(currentUserId)

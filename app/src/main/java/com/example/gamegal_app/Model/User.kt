@@ -8,9 +8,7 @@ class User {
     private var bio:String=""
     private var image:String=""
     private var uid:String=""
-
     constructor()
-
     constructor(username: String, fullname: String, bio: String, image: String, uid: String) {
         this.username = username
         this.fullname = fullname

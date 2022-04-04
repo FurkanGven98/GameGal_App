@@ -29,12 +29,12 @@ class Sign_in : AppCompatActivity() {
         val password = password_login.text.toString()
 
         when{
-            TextUtils.isEmpty(email) -> Toast.makeText(this,"Email is required.", Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(password) -> Toast.makeText(this,"Password is required.", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(email) -> Toast.makeText(this,"Email zorunlu", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(password) -> Toast.makeText(this,"Şifre zorunlu.", Toast.LENGTH_LONG).show()
             else -> {
                 val progressDialog= ProgressDialog(this@Sign_in)
-                progressDialog.setTitle("Login")
-                progressDialog.setMessage("Please wait,this may take a while...")
+                progressDialog.setTitle("Giriş")
+                progressDialog.setMessage("Lütfen bekleyiniz")
                 progressDialog.setCanceledOnTouchOutside(false)
                 progressDialog.show()
 

@@ -263,7 +263,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun userInfo(){
-        //YORUM
+
         val usersRef = FirebaseDatabase.getInstance().reference.child("Users").child(profileId)
         usersRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
