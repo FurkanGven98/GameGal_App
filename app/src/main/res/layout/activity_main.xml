@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-7dp"
-        android:background="#825D5D"
-        app:background="@android:color/white"
+        android:background="@color/siyahrenk"
+        app:itemIconTint="@color/sariarka"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_nav_menu" />
 

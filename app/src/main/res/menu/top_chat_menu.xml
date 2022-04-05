@@ -4,12 +4,14 @@
 
     <item
         android:id="@+id/arrow_left"
-        android:icon="@drawable/arrowleft"
+        android:icon="@drawable/ic_left_long_solid"
+        
         android:title="" />
 
     <item
         android:id="@+id/msg_text"
         android:title="Direct Message"
+
         />
 
     <item
