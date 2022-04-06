@@ -7,10 +7,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.gamegal_app.Fragments.*
 import com.example.gamegal_app.Model.User
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -32,6 +35,7 @@ class AccountSettingsActivity : AppCompatActivity() {
     private var myUrl = ""
     private var imageUri: Uri? = null
     private var storageProfilePicRef: StorageReference? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -206,7 +210,6 @@ class AccountSettingsActivity : AppCompatActivity() {
             }
         }
     }
-
 }
 
 

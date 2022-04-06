@@ -13,15 +13,18 @@
         android:title="" />
 
     <item
-        android:id="@+id/nav_add_post"
-        android:icon="@drawable/portrait"
+        android:id="@+id/nav_message"
+        android:icon="@drawable/message"
         android:title="" />
     <item
         android:id="@+id/nav_notifications"
-        android:icon="@drawable/plus"
+        android:icon="@drawable/portrait"
         android:title="" />
+
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/user"
         android:title="" />
+
+
 </menu>

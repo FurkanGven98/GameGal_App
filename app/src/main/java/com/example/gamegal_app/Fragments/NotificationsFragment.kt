@@ -40,7 +40,7 @@ class NotificationsFragment : Fragment() {
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
         notificationList = ArrayList()
-        notificationAdapter = NotificationAdapter(context!!,notificationList as ArrayList<Notification>)
+        notificationAdapter = NotificationAdapter(requireContext(),notificationList as ArrayList<Notification>)
         recyclerView.adapter = notificationAdapter
         readNotifications()
 

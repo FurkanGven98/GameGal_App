@@ -20,10 +20,9 @@ class MainActivity : AppCompatActivity() {
                 moveToFragment(SearchFragment())
                 return@OnNavigationItemSelectedListener  true
             }
-            R.id.nav_add_post -> {
-                item.isChecked = false
-                startActivity(Intent(this@MainActivity,AddPostActivity::class.java))
-                return@OnNavigationItemSelectedListener true
+            R.id.nav_message -> {
+                moveToFragment(ChatFragment())
+                return@OnNavigationItemSelectedListener  true
             }
             R.id.nav_notifications -> {
                 moveToFragment(NotificationsFragment())
@@ -34,10 +33,14 @@ class MainActivity : AppCompatActivity() {
                 moveToFragment(ProfileFragment())
                 return@OnNavigationItemSelectedListener  true
             }
+
         }
 
         false
     }
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

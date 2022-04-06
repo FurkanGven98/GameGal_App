@@ -43,7 +43,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:backgroundTint="@color/siyahrenk"
-                    app:icon="@drawable/message"
+                    app:icon="@drawable/plus"
                     app:iconSize="30dp"
                     app:iconTint="@color/sariarka" />
 

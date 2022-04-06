@@ -1,5 +1,6 @@
 package com.example.gamegal_app.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,14 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gamegal_app.AccountSettingsActivity
 import com.example.gamegal_app.Adapter.PostAdapter
+import com.example.gamegal_app.AddPostActivity
 import com.example.gamegal_app.Model.Post
 import com.example.gamegal_app.R
+import com.example.gamegal_app.ShowUsersActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
 
@@ -51,6 +56,8 @@ class HomeFragment : Fragment() {
         checkFollowings()
 
         return view
+
+
     }
 
     private fun checkFollowings() {

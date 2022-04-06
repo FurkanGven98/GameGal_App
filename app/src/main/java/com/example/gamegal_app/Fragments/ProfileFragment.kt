@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamegal_app.AccountSettingsActivity
 import com.example.gamegal_app.Adapter.MyImagesAdapter
+import com.example.gamegal_app.AddPostActivity
 import com.example.gamegal_app.Model.Post
 import com.example.gamegal_app.Model.User
 import com.example.gamegal_app.R
@@ -24,6 +25,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import java.util.*
@@ -156,6 +158,11 @@ class ProfileFragment : Fragment() {
                 }
             }
         }
+        view.message_btn.setOnClickListener {
+            val intent = Intent(context, AddPostActivity::class.java)
+            startActivity(intent)
+        }
+
         getFollowers()
         getFollowings()
         userInfo()

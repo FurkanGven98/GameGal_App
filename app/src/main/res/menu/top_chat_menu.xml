@@ -9,7 +9,7 @@
         android:title="" />
 
     <item
-        android:id="@+id/msg_text"
+        android:id="@+id/nav_msg"
         android:title="Direct Message"
 
         />
