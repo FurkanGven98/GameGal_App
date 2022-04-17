@@ -54,13 +54,13 @@ class AddPostActivity : AppCompatActivity() {
     {
         when{
 
-            imageUri == null -> Toast.makeText(this, "Please select image first.", Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(description_post.text.toString()) -> Toast.makeText(this, "Please write description", Toast.LENGTH_LONG).show()
+            imageUri == null -> Toast.makeText(this, "Lütfen önce resmi seçiniz.", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(description_post.text.toString()) -> Toast.makeText(this, "Lütfen açıklama giriniz.", Toast.LENGTH_LONG).show()
 
             else->{
                 val progressDialog = ProgressDialog(this)
-                progressDialog.setTitle("Adding New Post")
-                progressDialog.setMessage("Please wait, we are adding your picture...")
+                progressDialog.setTitle("Gönderi ekleniyor.")
+                progressDialog.setMessage("Lütfen bekleyiniz,güzel gönderinizi güzelleştiriyoruz...")
                 progressDialog.show()
 
                 val fileRef = storagePostPicRef!!.child(System.currentTimeMillis().toString() + ".jpg")
@@ -95,7 +95,7 @@ class AddPostActivity : AppCompatActivity() {
 
                             ref.child(postId).updateChildren(postMap)
 
-                            Toast.makeText(this, "Post uploaded successfully.", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "Gönder, başarıyla yüklendi.", Toast.LENGTH_LONG).show()
 
                             val intent = Intent(this@AddPostActivity, MainActivity::class.java)
 
