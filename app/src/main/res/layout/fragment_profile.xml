@@ -25,27 +25,39 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
+
 
 
                 <Button
+
                     android:id="@+id/edit_account_settings_btn"
                     android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:backgroundTint="@color/siyahrenk"
+                    android:backgroundTint="@color/sariarka"
                     app:icon="@drawable/settings"
                     app:iconSize="30dp"
-                    app:iconTint="@color/sariarka" />
+                    app:iconTint="#000000">
+
+
+                </Button>
+
+-->
 
                 <Button
                     android:id="@+id/message_btn"
                     android:layout_width="50dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:backgroundTint="@color/siyahrenk"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/sariarka"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="0dp"
                     app:icon="@drawable/plus"
                     app:iconSize="30dp"
-                    app:iconTint="@color/sariarka" />
+                    app:iconTint="#000000"></Button>
+
+
 
 
             </RelativeLayout>
