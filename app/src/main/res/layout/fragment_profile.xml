@@ -288,7 +288,8 @@
                 android:layout_weight="1"
                 android:background="@color/siyahrenk"
                 android:scaleType="fitCenter"
-                android:src="@drawable/send_icon"></ImageButton>
+                android:src="@drawable/send_icon"
+                app:tint="#FFFFFF"></ImageButton>
         </LinearLayout>
 
     </RelativeLayout>
