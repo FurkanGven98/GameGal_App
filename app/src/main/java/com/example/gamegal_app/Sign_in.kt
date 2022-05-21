@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
@@ -32,7 +34,7 @@ class Sign_in : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         signup_link_btn.setOnClickListener {
-            startActivity(Intent(this,Sign_up::class.java))
+            startActivity(Intent(this, Sign_up::class.java))
         }
 
         login_btn.setOnClickListener {
@@ -55,32 +57,35 @@ class Sign_in : AppCompatActivity() {
         }
 
     }
+
     private fun loginUser() {
 
         val email = email_login.text.toString()
         val password = password_login.text.toString()
 
-        when{
-            TextUtils.isEmpty(email) -> Toast.makeText(this,"Email zorunlu", Toast.LENGTH_LONG).show()
-            TextUtils.isEmpty(password) -> Toast.makeText(this,"Şifre zorunlu.", Toast.LENGTH_LONG).show()
+        when {
+            TextUtils.isEmpty(email) -> Toast.makeText(this, "Email zorunlu", Toast.LENGTH_LONG)
+                .show()
+            TextUtils.isEmpty(password) -> Toast.makeText(this, "Şifre zorunlu.", Toast.LENGTH_LONG)
+                .show()
             else -> {
-                val progressDialog= ProgressDialog(this@Sign_in)
+                val progressDialog = ProgressDialog(this@Sign_in)
                 progressDialog.setTitle("Giriş")
                 progressDialog.setMessage("Lütfen bekleyiniz")
                 progressDialog.setCanceledOnTouchOutside(false)
                 progressDialog.show()
 
-                val mAuth : FirebaseAuth = FirebaseAuth.getInstance()
-                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task->
-                    if(task.isSuccessful){
+                val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
                         progressDialog.dismiss()
-                        val intent = Intent(this@Sign_in,MainActivity::class.java)
+                        val intent = Intent(this@Sign_in, MainActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         finish()
-                    }else{
-                        val message=task.exception!!.toString()
-                        Toast.makeText(this,"Error: $message", Toast.LENGTH_LONG).show()
+                    } else {
+                        val message = task.exception!!.toString()
+                        Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG).show()
                         FirebaseAuth.getInstance().signOut()
                         progressDialog.dismiss()
                     }
@@ -101,8 +106,8 @@ class Sign_in : AppCompatActivity() {
             )
             finish()
         }
-        if(FirebaseAuth.getInstance().currentUser !=null){
-            val intent = Intent(this@Sign_in,MainActivity::class.java)
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            val intent = Intent(this@Sign_in, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
@@ -110,14 +115,11 @@ class Sign_in : AppCompatActivity() {
     }
 
 
-
-
     private fun signInGoogle() {
 
         val signInIntent: Intent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, Req_Code)
     }
-
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -147,13 +149,54 @@ class Sign_in : AppCompatActivity() {
                 Toast.makeText(this, account.email.toString().toString(), Toast.LENGTH_LONG).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                //----------------
+
+
+                val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
+                val usersRef: DatabaseReference =
+                    FirebaseDatabase.getInstance().reference.child("Users")
+                val userMap = HashMap<String, Any>()
+                userMap["uid"] = currentUserId
+                userMap["fullname"] = "fullName.toLowerCase()"
+                userMap["username"] = "userName.toLowerCase()"
+                userMap["email"] = "email"
+                userMap["bio"] = "Hey! Burası benim kişisel alanım."
+                userMap["image"] ="https://firebasestorage.googleapis.com/v0/b/gamegal-26535.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=4e83b86e-d2bb-40c7-b481-2cdb38d64cc4"
+
+                usersRef.child(currentUserId).setValue(userMap)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+
+                            Toast.makeText(
+                                this,
+                                "Hesap başarıyla oluşturuldu.Oyun dünyasına hoşgeldin",
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                            FirebaseDatabase.getInstance().reference
+                                .child("Follow").child(currentUserId)
+                                .child("Following").child(currentUserId)
+                                .setValue(true)
+
+
+
+                            finish()
+                        } else {
+                            val message = task.exception!!.toString()
+                            Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG).show()
+                            FirebaseAuth.getInstance().signOut()
+
+                        }
+                    }
+
+
+                //------------------
+
                 finish()
 
 
             }
         }
     }
-
-
 
 }
