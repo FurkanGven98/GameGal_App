@@ -54,7 +54,7 @@ class ChatFragment : Fragment() {
         binding.sendButton.setOnClickListener {
 
             auth.currentUser?.let {
-                val user = it.uid
+                val user = it.email
                 val chatText = binding.chatText.text.toString()
                 val date = FieldValue.serverTimestamp()
 

@@ -40,7 +40,7 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
     override fun getItemViewType(position: Int): Int {
 
         val chat = chats.get(position)
-        if (chat.user == FirebaseAuth.getInstance().currentUser?.uid) {
+        if (chat.user == FirebaseAuth.getInstance().currentUser?.email.toString()) {
             return VIEW_TYPE_MESSAGE_SENT
         } else {
             return VIEW_TYPE_MESSAGE_RECEIVED

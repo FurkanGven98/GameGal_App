@@ -29,13 +29,7 @@ import kotlinx.android.synthetic.main.activity_sign_in.*
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
-    private val splashScreen = 10000
-    lateinit var binding: ActivityMainBinding
-
-
-
-
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+       private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.nav_home -> {
                 moveToFragment(HomeFragment())
@@ -70,37 +64,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        /*
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        val animasyon1 = AnimationUtils.loadAnimation(this,R.anim.animasyon1)
-        val animasyon2 = AnimationUtils.loadAnimation(this,R.anim.animasyon2)
-
-        val imageView=binding.imageView3
-        val imageView2=binding.imageView4
-        imageView3.animation = animasyon1
-        imageView4.animation = animasyon2
-
-        //SplashScreen
-        Handler().postDelayed({
-        finish()
-        },splashScreen.toLong())
-*/
-/*
-        FirebaseApp.initializeApp(this)
-
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-        firebaseAuth = FirebaseAuth.getInstance()
-*/
-
-
-
-
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
